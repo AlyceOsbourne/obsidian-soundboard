@@ -13,13 +13,20 @@ The SoundboardPlugin adds an interactive soundboard to your Obsidian notes, allo
 
 This plugin can be installed using the BRAT (Beta Reviewer’s Auto-update Tool), which allows you to install and keep up to date with beta plugins not yet available in the official community plugins list.
 
-### Prerequisites
+### Manual
+1. Go to `Settings > Third-party plugins > Community plugins`, disable `Safe mode`
+2. Download the folder, and add it to your `<vault path>/.obsidian/plugins/` folder. 
+Enable in 
+
+### BRAT
+
+#### Prerequisites
 
 Ensure you have BRAT installed in Obsidian:
 1. Go to `Settings > Third-party plugins > Community plugins`, disable `Safe mode`, and click `Browse`.
 2. Search for `BRAT` and install it.
 
-### Installing SoundboardPlugin
+#### Installing SoundboardPlugin
 
 1. Open Obsidian and access the BRAT settings from `Settings > BRAT`.
 2. In the `Beta plugins` tab, paste the URL of this repository into the `Add beta plugin by URL` field and click `Add`.
