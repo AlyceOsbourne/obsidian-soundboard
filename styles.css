@@ -4,26 +4,27 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    background-color: #121212;
+    background-color: var(--background-primary);
 }
 .soundboard-sound {
     position: relative;
     width: 200px;
     height: 150px;
-    border: 2px solid #1DB954;
-    border-radius: 20px;
+    border: 2px solid var(--interactive-accent);
+    border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #181818;
+background-color: var(--background-secondary);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding-top: 60px;
     margin: 0 auto;
 }
 .soundboard-sound:hover {
     transform: scale(1.05);
+    border: 2px solid var(--interactive-accent-hover);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 .soundboard-image {
@@ -39,8 +40,9 @@
 }
 span {
     z-index: 2;
-    color: #fff;
+    color: var(--text-normal);
     font-size: 1em;
+	padding-top: 15px;
     text-align: center;
 }
 .play-pause-icon {
