@@ -1,0 +1,65 @@
+.soundboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #121212;
+}
+.soundboard-sound {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    border: 2px solid #1DB954;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-top: 60px;
+    margin: 0 auto;
+}
+.soundboard-sound:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.soundboard-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 45px);
+    z-index: 1;
+}
+span {
+    z-index: 2;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+}
+.play-pause-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.play-pause-icon.play {
+    color: #fff;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>');
+    
+}
+.play-pause-icon.pause {
+    color: #fff;
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>');
+}
