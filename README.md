@@ -51,6 +51,8 @@ url: https://example.com/sound2.mp3
 - `url`: The URL of the sound clip (required).
 - `image`: An optional URL to an image to display alongside the sound.
 
+The URL supports MP3 files, radio streams etc.
+
 ## Contributing
 
 Contributions to the SoundboardPlugin are welcome! Here's how you can help:
