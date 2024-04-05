@@ -1,21 +1,22 @@
 # SoundboardPlugin for Obsidian
 
-The SoundboardPlugin adds an interactive soundboard to your Obsidian notes, allowing you to play audio clips directly from your markdown files. This plugin is perfect for language learners, musicians, podcasters, and anyone who wants to embed audio directly into their notes for quick reference.
+The SoundboardPlugin adds an interactive soundboard to your Obsidian notes, allowing you to play audio clips directly from your markdown files. This plugin is perfect for language learners, musicians, podcasters, TTRPG lovers, and anyone who wants to embed audio directly into their notes for quick reference.
 
 ## Features
 
 - **Embeddable Soundboard**: Easily create a soundboard grid in your markdown files using a simple code block syntax.
-- **Customizable**: Add names, URLs, and optional images to personalize your sound clips.
+- **Customizable**: Add names, URLs, and optional images to personalize your sound clips. Adjust volume and set clips to loop as needed.
 - **Interactive UI**: Click to play/pause sounds directly from your note. The plugin provides a seamless audio experience within Obsidian.
-- **Automatic Cleanup**: Audio is automatically stopped and cleaned up when you navigate away from the note, ensuring no unwanted background play.
+- **Live Updates**: Changes made to the soundboard code block are immediately reflected without needing to restart the vault, ensuring a dynamic and flexible user experience.
+- **Automatic Cleanup**: Audio is automatically stopped and cleaned up when you navigate away from the note or update the code block, ensuring no unwanted background play.
 
 ## Installation
 
 This plugin can be installed using the BRAT (Beta Reviewer’s Auto-update Tool), which allows you to install and keep up to date with beta plugins not yet available in the official community plugins list.
 
 ### Manual
-1. Go to `Settings > Third-party plugins > Community plugins`, disable `Safe mode`
-2. Download the folder, and add it to your `<vault path>/.obsidian/plugins/` folder. 
+1. Go to `Settings > Third-party plugins > Community plugins`, disable `Safe mode`.
+2. Download the folder, and add it to your `<vault path>/.obsidian/plugins/` folder.
 Enable in 
 
 ### BRAT
@@ -42,6 +43,8 @@ To add a soundboard to your note, use the following code block format in your ma
 name: Example Sound 1
 url: https://example.com/sound1.mp3
 image: https://example.com/image1.jpg
+loop: true
+volume: 50%
 
 name: Example Sound 2
 url: https://example.com/sound2.mp3
@@ -50,8 +53,10 @@ url: https://example.com/sound2.mp3
 - `name`: The name of the sound clip (required).
 - `url`: The URL of the sound clip (required).
 - `image`: An optional URL to an image to display alongside the sound.
+- `loop`: Optionally set the clip to loop (true/false).
+- `volume`: Set the volume level as a percentage (defaults to 100% if not specified).
 
-The URL supports MP3 files, radio streams etc.
+The URL supports MP3 files, radio streams, etc. This feature is particularly useful for TTRPG lovers who wish to enhance their gaming sessions with thematic sounds and music.
 
 ## Contributing
 
