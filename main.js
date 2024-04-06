@@ -73,15 +73,25 @@ class SoundboardPlugin extends obsidian.Plugin {
             soundElement.className = 'soundboard-sound';
             soundElement.dataset.playing = sound.playing ? "true" : "false";
 
-            if (sound.image) {
+          if (sound.image) {
+                const imagePath = sound.image.startsWith('[[') && sound.image.endsWith(']]') ?
+                  this.app.vault.getResourcePath(this.app.vault.getAbstractFileByPath(sound.image.slice(2, -2))) :
+                  sound.image;
+    
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'soundboard-image-container';
+    
                 const image = document.createElement('img');
-                image.src = sound.image;
+                image.src = imagePath;
                 image.alt = sound.name;
                 image.className = 'soundboard-image';
-                soundElement.appendChild(image);
+    
+                imageContainer.appendChild(image);
+                soundElement.appendChild(imageContainer);
             }
             
             const text = document.createElement('span');
+            text.className = 'soundboard-text';
             text.textContent = sound.playing ? "Pause" : sound.name;
             soundElement.appendChild(text);
 
